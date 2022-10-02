@@ -7,7 +7,7 @@
 	padding: 6rem;
 	padding-left: 9rem;
 	font-size: $default-font-size;
-	transform: skewX(-12deg);
+	transform: skewX(-2deg);
 
 	&__shape {
 		width: 15rem;
@@ -17,7 +17,7 @@
 		shape-outside: circle(50% at 50% 50%);
 		-webkit-clip-path: circle(50% at 50% 50%);
 		clip-path: circle(50% at 50% 50%);
-		transform: translateX(-3rem) skewX(12deg);
+		transform: translateX(-3rem) skewX(2deg);
 		position: relative;
 	}
 
@@ -28,7 +28,7 @@
 	}
 
 	&__text {
-		transform: skewX(12deg);
+		transform: skewX(2deg);
 	}
 
 	&__caption {
@@ -55,3 +55,28 @@
 		filter: blur(3px) brightness(85%);
 	}
 }
+
+@media (min-width: 640px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+	.story {
+		transform: skewX(-12deg);
+
+		&__shape {
+			transform: translateX(-3rem) skewX(12deg);
+		}
+
+		&__text {
+			transform: skewX(12deg);
+		}
+	}
+
+}
+
+

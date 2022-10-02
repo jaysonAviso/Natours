@@ -1,8 +1,32 @@
+* {
+	box-sizing: border-box;
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
 .section-about {
 	background-color: $color-grey-light-1;
 	padding: 25rem 0;
 	margin-top: -20vh;
+
+	.about--content {
+		width: 90%;
+		padding: 1rem;
+	}
+
+	.about--composition {
+		width: 90%;
+		padding: 1.5rem;
+		margin-bottom: 5rem;
+	}
 }
+
 
 .section-features {
 	padding: 20rem 0;
@@ -19,12 +43,33 @@
 	& > * {
 		transform: skewY(7deg);
 	}
+
+	.feature--boxen {
+		width: 80%;
+
+		.feature-box {
+			margin-bottom: 6rem;
+		}
+	}
 }
+
 
 .section-tours {
 	background-color: $color-grey-light-1;
 	padding: 25rem 0 15rem 0;
 	margin-top: -10rem;
+
+	.tour-cards {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		.card {
+			width: 80%;
+			margin-bottom: 6rem;
+		}
+	}
 }
 
 .section-stories {
@@ -51,12 +96,161 @@
 		url(../img/nat-10.jpg);
 
 	background-size: 100%;
+	width: 100%;
 	border-radius: 3px;
 	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
 	height: 50rem;
 
 	&__form {
-		width: 50%;
+		width: 100%;
 		padding: 6rem;
+
+		.form__group {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (min-width: 640px) {
+
+	.section-features {
+
+		.feature--boxen {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 80%;
+
+			.feature-box {
+				width: 40rem;
+				margin-bottom: 6rem;
+			}
+		}
+	}
+
+	.section-tours {
+		.tour-cards {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 80%;
+			.card {
+				width: 40rem;
+				margin-bottom: 6rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.section-about {
+
+		.about--content {
+			width: 90%;
+			padding: 1rem;
+		}
+
+	}
+	.section-features {
+
+		.feature--boxen {
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			grid-template-columns: 40% 40%;
+			width: 100%;
+
+			.feature-box {
+				width: 90%;
+				margin-bottom: 6rem;
+			}
+		}
+	}
+
+	.section-tours {
+		.tour-cards {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 80%;
+			.card {
+				width: 50rem;
+				margin-bottom: 6rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+
+
+	.section-about {
+		background-color: $color-grey-light-1;
+		padding: 25rem 0;
+		margin-top: -20vh;
+
+		.about-contents {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+
+			.about--content {
+				width: 90%;
+				padding: 1rem;
+			}
+
+			.about--composition {
+				justify-self: flex-start;
+				align-self: flex-start;
+				width: 90%;
+				padding: 1.5rem;
+				margin-bottom: 5rem;
+			}
+
+		}
+	}
+
+	.section-features {
+
+		.feature--boxen {
+			display: flex;
+			flex-direction: row;
+			justify-content:space-between;
+			align-items: center;
+			width: 100%;
+
+			.feature-box {
+				width: 25rem;
+				margin-bottom: 6rem;
+			}
+		}
+	}
+
+	.section-tours {
+		.tour-cards {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			.card {
+				width: 30rem;
+				margin-bottom: 6rem;
+			}
+		}
+	}
+
+	.book {
+		&__form {
+			width: 50%;
+
+			.form__group {
+				margin-bottom: 0;
+			}
+		}
 	}
 }
